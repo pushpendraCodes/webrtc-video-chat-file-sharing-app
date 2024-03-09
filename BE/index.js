@@ -10,6 +10,10 @@ const io = require("socket.io")(server, {
   },
 });
 
+app.get("/" ,async(req,res)=>{
+  res.send("hello node js")
+})
+
 io.on("connection", (socket) => {
   socket.emit("me", socket.id);
 
