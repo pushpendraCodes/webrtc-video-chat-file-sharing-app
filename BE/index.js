@@ -15,6 +15,7 @@ app.get("/" ,async(req,res)=>{
 })
 
 io.on("connection", (socket) => {
+  console.log(socket.id ,"me")
   socket.emit("me", socket.id);
 
   socket.on("disconnect", () => {
