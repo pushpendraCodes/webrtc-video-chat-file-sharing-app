@@ -4,7 +4,7 @@ import Peer from "peerjs";
 
 export const SocketContext = createContext();
 
-const socket = io("http://localhost:8000");
+const socket = io(import.meta.env.REACT_URL);
 
 export const ContextProvider = ({ children }) => {
   const myVideo = useRef();
