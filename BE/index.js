@@ -4,7 +4,10 @@ const app = express();
 const server = http.createServer(app);
 const PORT = process.env.PORT ||8000
 const cors = require("cors")
-app.use(cors())
+app.use(cors({
+  origin:"*",
+  credentials: true
+}))
 const io = require("socket.io")(server, {
   cors: {
     origin: "*",
