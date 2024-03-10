@@ -5,12 +5,12 @@ const server = http.createServer(app);
 const PORT = process.env.PORT ||8000
 const cors = require("cors")
 app.use(cors({
-  origin:"https://webrtc-video-chat-file-sharing-app.vercel.app",
+  origin:"https://webrtc-video-chat-file-sharing-app-react.vercel.app",
   credentials: true
 }))
 const io = require("socket.io")(server, {
   cors: {
-    origin: "https://webrtc-video-chat-file-sharing-app.vercel.app",
+    origin: "https://webrtc-video-chat-file-sharing-app-react.vercel.app,
     methods: ["GET", "POST"],
   },
 });
